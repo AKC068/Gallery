@@ -5,8 +5,8 @@ import { List } from "antd";
 import SearchBar from "./SearchBar";
 import PhotoModal from "./Modal";
 
-const API_KEY = "608a899ed2a7091009b6e910a79d5057";
-const API_URL = "https://api.flickr.com/services/rest/";
+const API_key = "608a899ed2a7091009b6e910a79d5057";
+const API_url = "https://api.flickr.com/services/rest/";
 const SAFE_SEARCH = 1;
 const size_suffix = "w";
 const RESULTS_PER_PAGE = 40;
@@ -32,9 +32,9 @@ const App = () => {
       setLoading(true);
       if (inputPage !== page) setSearchQuery("");
 
-      const response = await axios.get(API_URL, {
+      const response = await axios.get(API_url, {
         params: {
-          api_key: API_KEY,
+          api_key: API_key,
           method: "flickr.photos.search",
           safe_search: SAFE_SEARCH,
           content_type: 1,
@@ -73,9 +73,9 @@ const App = () => {
       setLoading(true);
       if (searchQuery !== query) setSearchQuery(query);
 
-      const response = await axios.get(API_URL, {
+      const response = await axios.get(API_url, {
         params: {
-          api_key: API_KEY,
+          api_key: API_key,
           method: "flickr.photos.search",
           safe_search: SAFE_SEARCH,
           content_type: 1,
