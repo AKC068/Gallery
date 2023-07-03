@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fefefeff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #e7fbff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23de004b' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23a80039' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d80e6f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23a10a51' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d21c93' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23991368' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23cb2ab7' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23921d80' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c538db' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%238a2697' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23bf46ff' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%238330af' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.02s;
+  background: #694a4a;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.hoverEffect div {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 250vh;
+  height: 250vw;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.65;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.header h1 {
+  margin: 0 auto 20px;
+  text-align: center;
+  font-family: "Dancing Script";
+  font-size: 60px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  position: relative;
+  min-height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #a43ddc;
+}
+
+.custom-autocomplete {
+  flex: 1 1 0%;
+  max-width: 50%;
+  background-color: #05060f0a;
+}
+
+@media screen and (max-width: 480px) {
+  .custom-autocomplete {
+    max-width: 100%;
+  }
+}
+
+.custom-autocomplete .ant-select-selector {
+  border-color: #753d97 !important;
+}
+
+.custom-autocomplete .ant-select-selection-placeholder {
+  color: #753d97 !important;
+}
